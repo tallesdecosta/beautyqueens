@@ -1,0 +1,6 @@
+ordem das telas:
+1. login
+2. cadastro
+3. pele
+4. confirmação
+5. verificação

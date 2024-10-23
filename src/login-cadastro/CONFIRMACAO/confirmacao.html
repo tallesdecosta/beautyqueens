@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código</title>
+    <link rel="stylesheet" href="/CONFIRMACAO/confirmacao.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Estamos quase lá!</h1>
+        <p>Agora digite pra gente o código de verificação que te enviamos por e-mail. Se não estiver na sua caixa
+            principal, por favor verifique a caixa de spam.</p>
+
+        <div class="input-container">
+            <input type="text" id="codigo" placeholder="Digite o código" maxlength="6">
+            <span id="error-message" class="error-message"></span>
+        </div>
+
+        <button class="ativado" id="confirmar-btn">Confirmar</button>
+        <button class="secundario" id="reenviar-btn">Reenviar código</button>
+    </div>
+
+    <script src="/CONFIRMACAO/confirmacao.js"></script>
+</body>
+
+</html>
