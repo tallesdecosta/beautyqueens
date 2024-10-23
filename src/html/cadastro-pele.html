@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pele</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-pele.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="progress-bar">
+            <span class="step ativo"><img src="img/check.png" alt=""></span>
+            <span class="line"></span>
+            <span class="step ativo">2</span>
+        </div>
+
+        <div class="flex sobre">
+            <p id="sobre-vc" class="semi-bold">Sobre você</p>
+            <p id="sobre-pele" class="semi-bold">Sobre sua pele</p>
+        </div>
+
+        <div class="flex">
+            <button class="voltar" onclick="history.back()">
+                <img src="img/arrow.svg" alt="">
+            </button>
+            <h1>Complete seu cadastro</h1>
+        </div>
+
+        <p>Preencha seus dados para criarmos o seu perfil exclusivo e recomendarmos os produtos ideais para uma pele
+            mais saudável e bonita.</p>
+
+        <form id="formCadastro">
+            <label for="tonalidadePele">Qual a tonalidade da sua pele?</label>
+            <select id="tonalidadePele" class="input-field">
+                <option value="" disabled selected>Selecione a tonalidade</option>
+                <option value="branca">Branca</option>
+                <option value="parda">Parda</option>
+                <option value="negra">Negra</option>
+                <option value="indígena">Indígena</option>
+                <option value="amarela">Amarela</option>
+            </select>
+
+            <label for="cicatrizes">Possui cicatrizes no rosto?</label>
+            <select id="cicatrizes" class="input-field">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="sim">Sim</option>
+                <option value="não">Não</option>
+            </select>
+
+            <label for="aspectosPeleInput">Insira os aspectos da sua pele <span class="info"></span></label>
+            <div class="select-box" id="aspectosPeleBox"></div>
+            <input type="text" id="aspectosPeleInput" class="input-field"
+                placeholder="Digite um aspecto e pressione Enter">
+
+            <label for="alergiasInput">Insira suas alergias <span class="info"></span></label>
+            <div class="select-box" id="alergiasBox"></div>
+            <input type="text" id="alergiasInput" class="input-field"
+                placeholder="Digite uma alergia e pressione Enter">
+
+            <div class="buttons">
+                <button type="submit" id="confirmarButton" class="ativado">Confirmar</button>
+                <button type="button" id="cancelarButton" class="secundario">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/cadastro-pele.js"></script>
+</body>
+
+</html>

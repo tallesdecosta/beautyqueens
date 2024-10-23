@@ -1,0 +1,150 @@
+@font-face {
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200;
+    src: 
+        local("Poppins"),
+        url(fonts/poppins/Poppins-Regular.ttf);
+
+}
+
+@font-face {
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: 
+        local("Poppins"),
+        url(fonts/poppins/Poppins-SemiBold.ttf);
+
+}
+
+@font-face {
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: 
+        local("Poppins"),
+        url(fonts/poppins/Poppins-Bold.ttf);
+
+}
+
+:root {
+
+    --cor-primaria-dia: #F53AD6;
+    --cor-erro: #B52A00;
+    --cor-desativado: #97979788;
+    --cor-primaria-noite: #7461AB;
+    --cor-secundaria-noite: #AFA4CF;
+}
+
+* {
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", 'Roboto', 'Montserrat';
+
+}
+
+p {
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: -0.41px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    letter-spacing: -0.41px;
+}
+
+label {
+    color: #484848;
+    font-weight: 200;
+    letter-spacing: -0.41px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+input {
+    width: 90%;
+    padding: 14px;
+    border: 1px solid #000;
+    font-weight: 200;
+}
+
+::placeholder {
+
+    font-weight: 200;
+    color: #48484856;
+
+}
+
+option, select {
+    font-size: 14px;
+    font-weight: 200;
+    color: #000;
+
+}
+
+button {
+    border: none;
+    font-weight: 400;
+    border-radius: 4px;
+    text-transform:uppercase;
+    padding: 13px 35px;
+    width: 341px;
+}
+
+.desativado {
+    background-color: #97979788;
+    color: #fff;
+}
+
+.ativado {
+    background-color: #F53AD6;
+    color: #fff;
+}
+
+.voltar {
+    background-color: transparent;
+    width: min-content;
+    margin: 0;
+    padding: 0;
+}
+
+.secundario {
+    background-color: transparent;
+    color: #F53AD6;
+    border: 1px solid #F53AD6;
+
+}
+
+.flex {
+    display: flex;
+
+}
+
+.terciario {
+    background-color: transparent;
+    color: #404040;
+}
+
+
+
+select {
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 308px 20px;
+    appearance: none;
+}
+
+select:focus-visible {
+    background-image: url(../img/arrow-invertido.svg);
+}
+
+.semi-bold {
+    font-weight: 400;
+}

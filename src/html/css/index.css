@@ -1,0 +1,33 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    text-align: center;
+    width: 375px;
+}
+
+ img {
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-wrapper {
+    margin-top: 20px;
+}
+
+.no-account {
+    margin-top: 10px;
+    font-weight: 400;
+
+}
+
+.no-account:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
