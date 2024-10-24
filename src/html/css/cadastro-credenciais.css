@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 375px;
+    width: 341px;
     margin: 0 auto;
 }
 
@@ -37,6 +37,7 @@ body {
     margin-bottom: 35px;
     position: relative;
     width: 350px;
+    overflow: hidden;
 }
 
 #sobre-pele {
