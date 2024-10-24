@@ -65,7 +65,8 @@ document.getElementById("formCadastro").addEventListener("submit", function (eve
     event.preventDefault();
 
     if (areAllFieldsFilled()) {
-        window.location.href = "confirmacao.html";
+        const queryString = new URLSearchParams(window.location.search);
+        window.location.href = `confirmacao.html?email=${queryString.get('email')}`;
     } else {
         alert("Por favor, preencha todos os campos.");
     }

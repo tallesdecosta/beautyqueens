@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Reatribuir o evento de clique ao novo botão
                 confirmarButton.addEventListener("click", () => {
-                    window.location.href = "cadastro-pele.html";
+                    window.location.href = `cadastro-pele.html?email=${emailInput.value}`;
                 });
             }
         } else {
@@ -203,6 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     confirmarButton.addEventListener("click", () => {
-        window.location.href = "cadastro-pele.html";
+        window.location.href = `cadastro-pele.html?email=${emailInput.value}`;
     });
 });

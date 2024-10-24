@@ -7,7 +7,7 @@
     
     switch ($_SERVER['REQUEST_URI']) {
 
-        case '/auth/auth.php/login':
+        case '/php/auth/auth.php/login':
             
             if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -68,7 +68,7 @@
 
             break;
 
-        case '/auth/auth.php/register':
+        case '/php/auth/auth.php/register':
 
             $data = json_decode(file_get_contents("php://input"), true);
 
