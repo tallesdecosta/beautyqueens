@@ -103,3 +103,24 @@ button {
     max-width: 48%;
 
 }
+
+#nomeError,
+#cpfError,
+#contatoError,
+#emailError,
+#senhaError,
+#cidadeError {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+input.error-border,
+select.error-border {
+    border-color: #B52A00;
+}
+
+input:focus.error-border,
+select:focus.error-border {
+    border-color: #B52A00;
+}
