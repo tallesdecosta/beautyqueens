@@ -35,6 +35,7 @@
 
     --cor-primaria-dia: #F53AD6;
     --cor-erro: #B52A00;
+    --cor-sucesso: #61AA71;
     --cor-desativado: #97979788;
     --cor-primaria-noite: #7461AB;
     --cor-secundaria-noite: #AFA4CF;
@@ -139,7 +140,9 @@ select {
     background-repeat: no-repeat;
     background-position: 308px 20px;
     appearance: none;
+    color: #48484856;
 }
+
 
 select:focus-visible {
     background-image: url(../img/arrow-invertido.svg);
@@ -147,4 +150,12 @@ select:focus-visible {
 
 .semi-bold {
     font-weight: 400;
+}
+
+select:not(:invalid) {
+    color: #000;
+}
+
+input {
+    outline: none;
 }

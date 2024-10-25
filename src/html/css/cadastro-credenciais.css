@@ -109,10 +109,27 @@ button {
 #contatoError,
 #emailError,
 #senhaError,
-#cidadeError {
+#cidadeError,
+#municipioError,
+#nome-logradouroError {
     color: red;
     font-size: 12px;
     display: none;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.img-input-error {
+    background-image: url('../img/erro-input.svg');
+    background-repeat: no-repeat;
+    background-position: 308px 15px;
+    
+}
+
+.img-input-success {
+    background-image: url('../img/sucess-input.svg');
+    background-repeat: no-repeat;
+    background-position: 308px 15px;
 }
 
 input.error-border,
@@ -124,3 +141,4 @@ input:focus.error-border,
 select:focus.error-border {
     border-color: #B52A00;
 }
+

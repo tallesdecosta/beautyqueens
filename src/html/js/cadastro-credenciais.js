@@ -11,10 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = errorMessage;
             errorElement.style.display = 'block';
             input.style.borderColor = '#B52A00';
+            input.classList.add('img-input-error');
+            input.style.marginBottom = '4px';
         } else {
             errorElement.textContent = '';
             errorElement.style.display = 'none';
             input.style.borderColor = '#ccc';
+            input.style.marginBottom = '15px';
+            input.classList.remove('img-input-error');
         }
         return isValid;
     }
@@ -25,38 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cpfInput = document.getElementById('cpf');
-    const cpfError = document.getElementById("cpfError");
-
-    const regexCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
-
-    function validateField(input, regex, errorElement, errorMessage) {
-        const value = input.value.trim();
-        const isValid = regex.test(value);
-        if (!isValid) {
-            errorElement.textContent = errorMessage;
-            errorElement.style.display = 'block';
-            input.style.borderColor = '#B52A00';
-        } else {
-            errorElement.textContent = '';
-            errorElement.style.display = 'none';
-            input.style.borderColor = '#ccc';
-        }
-        return isValid;
-    }
-
-    cpfInput.addEventListener('input', () => {
-        validateField(cpfInput, regexCPF, cpfError, "CPF inválido. Deve seguir o formato xxx.xxx.xxx-xx.");
-        checkAllFields();
-    });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
     const telefoneInput = document.getElementById('telefone');
     const contatoError = document.getElementById("contatoError");
 
-    const regexTelefone = /^\(\d{2}\)\d{4,5}-\d{4}$/;
+    const regexTelefone = /^[1-9]{11}/;
 
     function validateField(input, regex, errorElement, errorMessage) {
         const value = input.value.trim();
@@ -65,10 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = errorMessage;
             errorElement.style.display = 'block';
             input.style.borderColor = '#B52A00';
+            telefoneInput.classList.add('img-input-error');
+            input.style.marginBottom = '4px';
+            a = input.value;
+            a = a.replace(/\D/g, '');
+            input.value = a;
         } else {
             errorElement.textContent = '';
             errorElement.style.display = 'none';
-            input.style.borderColor = '#ccc';
+            input.style.borderColor = '#000';
+            input.style.marginBottom = '15px';
+            input.classList.remove('img-input-error');
+            val = input.value;
+            val = val.replace(/(\d{2})(\d{5})(\d{4})/, '($1)$2-$3');
+            input.value = val;
+            
         }
         return isValid;
     }
@@ -79,29 +68,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (e) => {
     const emailInput = document.getElementById('email');
     const emailError = document.getElementById("emailError");
 
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+    
     function validateField(input, regex, errorElement, errorMessage) {
         const value = input.value.trim();
         const isValid = regex.test(value);
+
         if (!isValid) {
             errorElement.textContent = errorMessage;
             errorElement.style.display = 'block';
             input.style.borderColor = '#B52A00';
+            emailInput.classList.add('img-input-error');
+            input.style.marginBottom = '4px';
         } else {
             errorElement.textContent = '';
             errorElement.style.display = 'none';
             input.style.borderColor = '#ccc';
+            input.style.marginBottom = '15px';
+            input.classList.remove('img-input-error');
+            
         }
         return isValid;
     }
 
     emailInput.addEventListener('input', () => {
         validateField(emailInput, regexEmail, emailError, "Email inválido.");
+        
         checkAllFields();
     });
 });
@@ -119,10 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = errorMessage;
             errorElement.style.display = 'block';
             input.style.borderColor = '#B52A00';
+            senhaInput.classList.add('img-input-error');
+            input.style.marginBottom = '4px';
         } else {
             errorElement.textContent = '';
             errorElement.style.display = 'none';
             input.style.borderColor = '#ccc';
+            input.style.marginBottom = '15px';
+            input.classList.remove('img-input-error');
         }
         return isValid;
     }
@@ -146,10 +146,15 @@ document.addEventListener("DOMContentLoaded", () => {
             errorElement.textContent = errorMessage;
             errorElement.style.display = 'block';
             input.style.borderColor = '#B52A00';
+            input.style.marginBottom = '4px';
+            input.classList.add('img-input-error');
         } else {
             errorElement.textContent = '';
             errorElement.style.display = 'none';
             input.style.borderColor = '#ccc';
+            input.style.marginBottom = '15px';
+            input.classList.remove('img-input-error');
+            
         }
         return isValid;
     }
