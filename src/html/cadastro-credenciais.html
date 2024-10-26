@@ -103,7 +103,7 @@
 
             <label for="tipo-logradouro">Tipo de logradouro</label>
             <select id="tipo-logradouro" required>
-                <option value="">Selecione o tipo de logradouro</option>
+                <option value="" disabled selected>Selecione o tipo de logradouro</option>
                 <option value="rua">Rua</option>
                 <option value="avenida">Avenida</option>
                 <option value="travessa">Travessa</option>
@@ -119,14 +119,16 @@
                 <option value="beco">Beco</option>
             </select>
 
-            <label for="nome-logradouro">Nome do logradouro</label>
-            <input type="text" id="nome-logradouro" placeholder="Nome do seu logradouro" required>
+            <label for="logradouro">Nome do logradouro</label>
+            <input type="text" id="logradouro" placeholder="Nome do seu logradouro" required>
+            <span id="logradouroError" style="color: red; display: none;"></span>
 
             <div class="flex div-form">
 
                 <div>
                     <label for="numero">Número</label>
                     <input type="text" id="numero" placeholder="0" required>
+                    <span id="numeroError" style="color: red; display: none;"></span>
                 </div>
 
                 <div>
@@ -140,7 +142,7 @@
         </form>
     </div>
 
-    <script defer src="js/teste.js"></script>
+    <script defer src="js/cadastro-credenciais.js"></script>
 
 </body>
 

@@ -111,7 +111,8 @@ button {
 #senhaError,
 #cidadeError,
 #municipioError,
-#nome-logradouroError {
+#logradouroError,
+#numeroError {
     color: red;
     font-size: 12px;
     display: none;
