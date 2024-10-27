@@ -123,7 +123,7 @@ function checkAllFields() {
     const isValidCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpfInput.value.trim());
     const isValidTelefone = /^\(\d{2}\)\d{5}-\d{4}$/.test(telefoneInput.value.trim());
     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
-    const isValidSenha = /^.{8,}$/.test(senhaInput.value.trims());
+    const isValidSenha = /^.{8,}$/.test(senhaInput.value.trim());
     const isValidCidade = /^[a-zA-Z\s]+$/.test(cidadeInput.value.trim());
     const isValidMunicipio = /^[a-zA-Z\s]+$/.test(municipioInput.value.trim());
     const isValidLogradouro = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/.test(logradouroInput.value.trim());
