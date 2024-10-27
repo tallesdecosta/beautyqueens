@@ -35,8 +35,8 @@
 
         <form id="formCadastro">
             <label for="tonalidadePele">Qual a tonalidade da sua pele?</label>
-            <select id="tonalidadePele" class="input-field">
-                <option value="" disabled selected>Selecione a tonalidade</option>
+            <select id="tonalidadePele" class="input-field" required>
+                <option value="" disabled selected>Selecione uma opção</option>
                 <option value="branca">Branca</option>
                 <option value="parda">Parda</option>
                 <option value="negra">Negra</option>
@@ -45,7 +45,7 @@
             </select>
 
             <label for="cicatrizes">Possui cicatrizes no rosto?</label>
-            <select id="cicatrizes" class="input-field">
+            <select id="cicatrizes" class="input-field" required>
                 <option value="" disabled selected>Selecione uma opção</option>
                 <option value="sim">Sim</option>
                 <option value="não">Não</option>
@@ -62,7 +62,7 @@
                 placeholder="Digite uma alergia e pressione Enter">
 
             <div class="buttons">
-                <button type="submit" id="confirmarButton" class="ativado">Confirmar</button>
+                <button type="button" id="confirmarButton" class="desativado">Confirmar</button>
                 <button type="button" id="cancelarButton" class="secundario">Cancelar</button>
             </div>
         </form>

@@ -8,6 +8,17 @@ document.getElementById("aspectosPeleInput").addEventListener("keypress", functi
             document.getElementById("aspectosPeleBox").appendChild(chip);
             input.value = "";
         }
+        if(areAllFieldsFilled()) {
+    
+            document.getElementById("confirmarButton").classList.remove('desativado');
+            document.getElementById("confirmarButton").classList.add('ativado');
+
+        } else {
+
+            document.getElementById("confirmarButton").classList.remove('ativado');
+            document.getElementById("confirmarButton").classList.add('desativado');
+
+        }
     }
 });
 
@@ -20,6 +31,17 @@ document.getElementById("alergiasInput").addEventListener("keypress", function (
             const chip = createChip(value);
             document.getElementById("alergiasBox").appendChild(chip);
             input.value = "";
+        }
+        if(areAllFieldsFilled()) {
+    
+            document.getElementById("confirmarButton").classList.remove('desativado');
+            document.getElementById("confirmarButton").classList.add('ativado');
+
+        } else {
+
+            document.getElementById("confirmarButton").classList.remove('ativado');
+            document.getElementById("confirmarButton").classList.add('desativado');
+
         }
     }
 });
@@ -35,6 +57,17 @@ function createChip(value) {
 
     removeButton.addEventListener("click", function () {
         chip.remove();
+        if(areAllFieldsFilled()) {
+    
+            document.getElementById("confirmarButton").classList.remove('desativado');
+            document.getElementById("confirmarButton").classList.add('ativado');
+
+        } else {
+
+            document.getElementById("confirmarButton").classList.remove('ativado');
+            document.getElementById("confirmarButton").classList.add('desativado');
+
+        }
     });
 
     chip.appendChild(removeButton);
@@ -52,6 +85,32 @@ function isChipAlreadyAdded(value, boxId) {
     return false;
 }
 
+selects = document.getElementsByTagName('select');
+for (s in selects) {
+    if (s == 0 || s == 1) {
+
+        selects[s].addEventListener('change', () => {
+
+            if(areAllFieldsFilled()) {
+    
+                document.getElementById("confirmarButton").classList.remove('desativado');
+                document.getElementById("confirmarButton").classList.add('ativado');
+    
+            } else {
+    
+                document.getElementById("confirmarButton").classList.remove('ativado');
+                document.getElementById("confirmarButton").classList.add('desativado');
+    
+            }
+    
+        });
+
+    }
+
+    
+
+}
+
 function areAllFieldsFilled() {
     const tonalidade = document.getElementById("tonalidadePele").value.trim();
     const cicatrizes = document.getElementById("cicatrizes").value.trim();
@@ -61,17 +120,23 @@ function areAllFieldsFilled() {
     return tonalidade && cicatrizes && aspectosPele > 0 && alergias > 0;
 }
 
-document.getElementById("formCadastro").addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById("confirmarButton").addEventListener("click", () => {
 
     if (areAllFieldsFilled()) {
+
         const queryString = new URLSearchParams(window.location.search);
         window.location.href = `confirmacao.html?email=${queryString.get('email')}`;
+
     } else {
+
         alert("Por favor, preencha todos os campos.");
+
     }
+
 });
 
 document.getElementById("cancelarButton").addEventListener("click", function () {
+
     window.location.href = "../index.html";
+
 });
