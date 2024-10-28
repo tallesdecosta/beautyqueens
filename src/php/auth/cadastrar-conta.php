@@ -20,9 +20,11 @@ switch ($_SERVER['REQUEST_URI']) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = json_decode(file_get_contents('php://input'), true);
             if (!isset($data['nome_fantasia'], $data['username'], $data['email'], $data['senha'])) {
+
                 http_response_code(400);
                 echo json_encode(["message" => "Preencha todos os campos obrigatórios."]);
                 exit;
+                
             }
 
             $conn = conectarBanco();

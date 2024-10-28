@@ -11,14 +11,19 @@
 
 <body>
     <div class="container">
-        <div id="toaster">
-            <span class="icon">✖️</span>
-            <div class="content">
-                <p class="title">Algo deu errado...</p>
-                <p class="message">Não conseguimos validar suas credenciais, tente novamente.</p>
-            </div>
-            <button class="close-btn" onclick="closeToaster()">✖️</button>
-        </div>        
+        <div class="toaster-container">
+            <div id="toaster">
+                <span class="icon"><img src="img/erro-input.svg" alt=""></span>
+                <div class="content">
+                    <p class="title">Algo deu errado...</p>
+                    <p class="message">Não conseguimos validar suas credenciais, tente novamente.</p>
+                </div>
+                <span id="linha" class="linha"></span>
+                <button class="close-btn" onclick="closeToaster()">✖️</button>
+            </div> 
+            
+        </div>
+               
         <div class ="input-container">
             <img src="img/logo.png" alt="Logo da Beautyqueens e Lucas">
             <input type="email" placeholder="exemplo@email.com.br" class="input-field" id="email">

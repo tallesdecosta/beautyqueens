@@ -23,7 +23,7 @@
 
                     $st = $conn -> prepare("SELECT pessoa_id, senha FROM pessoa WHERE email = (?)");
 
-                    $st -> bind_param("i", $email);
+                    $st -> bind_param("s", $email);
                     $st -> execute();
                     
                     $result = $st -> get_result();
@@ -42,7 +42,7 @@
 
                             http_response_code(401);
 
-                            echo json_encode(['auth' => false, 'motivo' => 'a senha do usuário está incorreta'], JSON_UNESCAPED_UNICODE);
+                            echo json_encode(['auth' => false, 'motivo' => 'senha incorreta'], JSON_UNESCAPED_UNICODE);
 
                         }
                         
@@ -94,6 +94,7 @@
                         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                     if ($stmt = mysqli_prepare($conn, $query)) {
+
                         $hashed_password = password_hash($data['senha'], PASSWORD_DEFAULT);
                         mysqli_stmt_bind_param($stmt, "ssssssssssss", $data['nome'], $data['genero'], $data['cpf'], $data['contato'], $data['email'], $hashed_password, $data['estado'], $data['cidade'], $data['municipio'], $data['logradouro'], $data['numero'], $data['complemento']);
 
@@ -106,7 +107,9 @@
                         }
 
                         mysqli_stmt_close($stmt);
+
                     } else {
+
                         http_response_code(500);
                         echo json_encode(["erro" => "Erro ao preparar a consulta"]);
                     }
