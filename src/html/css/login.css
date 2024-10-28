@@ -1,0 +1,74 @@
+/* Aqui são gerais, o que tem no main já ta vinculado porem adicionei coisinhas pra página. Não mexer nessa bagaça senão o pau vai torar */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+button {
+    padding: 13px 35px;
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer; /* Garante o pointer quando a pessoinha passar o hover */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.secundario:hover {
+    background-color: #F53AD6;/* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+    color: #fff;
+}
+
+.terciario:hover{
+    font-weight: bold;
+}
+
+/* Classes específicas da logo da beauty (pq somos lindese trabalhei com png, bjs) */
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Complementar para ajustar o input */
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Complementar para ajustar o container */
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
