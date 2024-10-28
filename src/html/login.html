@@ -11,10 +11,18 @@
 
 <body>
     <div class="container">
+        <div id="toaster">
+            <span class="icon">✖️</span>
+            <div class="content">
+                <p class="title">Algo deu errado...</p>
+                <p class="message">Não conseguimos validar suas credenciais, tente novamente.</p>
+            </div>
+            <button class="close-btn" onclick="closeToaster()">✖️</button>
+        </div>        
         <div class ="input-container">
             <img src="img/logo.png" alt="Logo da Beautyqueens e Lucas">
-            <input type="email" placeholder="exemplo@email.com.br" class="input-field">
-            <input type="password" placeholder="Senha" class="input-field">
+            <input type="email" placeholder="exemplo@email.com.br" class="input-field" id="email">
+            <input type="password" placeholder="Senha" class="input-field" id="password">
     
             <button type="submit" id ="btn-entrar" class="ativado" onclick="iniciarProcessamento()">ENTRAR</button>
             <button class="secundario">ESQUECI MINHA SENHA</button>
