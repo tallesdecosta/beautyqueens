@@ -152,11 +152,45 @@ function checkAllFields() {
     }
 }
 
-confirmarButton.addEventListener("click", () => {
+confirmarButton.addEventListener("click", async () => {
 
     if (confirmarButton.disabled === false) {
 
-        window.location.href = `cadastro-pele.html?email=${emailInput.value}`;
+        body = {
+
+            nome: document.getElementById('nome').value,
+            genero: document.getElementById('genero').value,
+            cpf: document.getElementById('cpf').value,
+            telefone: document.getElementById('telefone').value,
+            email: document.getElementById('email').value,
+            senha: document.getElementById('senha').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('estado').value,
+            municipio: document.getElementById('municipio').value,
+            tipoLogradouro: document.getElementById('tipo-logradouro').value,
+            nomeLogradouro:document.getElementById('logradouro').value,
+            numeroLogradouro: document.getElementById('numero').value
+
+        }
+
+        response = await fetch('/php/auth/cadastro.php', {
+
+            method: 'POST',
+            body: JSON.stringify(body),
+            credentials: "include"
+
+        }).then((res) => {
+            return res.json();
+        });
+
+        if(response.success) {
+
+            window.location.href = 'cadastro-pele.html';
+            
+        }
+
+        console.log(response);
+
 
     }
 
