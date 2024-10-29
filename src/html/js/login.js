@@ -22,28 +22,39 @@ async function iniciarProcessamento() {
         password: document.getElementById("password").value
     }
 
+
+
     response = await fetch('../php/auth/auth.php/login', {
 
-        method: "POST",
-        body: JSON.stringify(body)
-
+            method: "POST",
+            body: JSON.stringify(body)
+    
     }).then((res) => {
-
-        return res.json();
-
+    
+            return res.json();
+    
+    }).catch(e => {
+        return false;
     });
+
+
 
     if (response.auth === true) {
 
         window.location.href = 'home.html';
-
+    
     } else {
-
+    
         showToaster("Não conseguimos validar suas\n credenciais, tente novamente.");
-
+    
         emailField.classList.add("error");
         passwordField.classList.add("error");
-    }
+        }
+    
+
+    
+
+   
 }
 
 function showToaster(message) {

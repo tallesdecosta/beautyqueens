@@ -19,7 +19,7 @@
                     <p class="message">Não conseguimos validar suas credenciais, tente novamente.</p>
                 </div>
                 <span id="linha" class="linha"></span>
-                <button class="close-btn" onclick="closeToaster()">✖️</button>
+                <button class="close-btn" onclick="closeToaster()"><img src="img/erro-input.svg" alt=""></button>
             </div> 
             
         </div>
@@ -31,7 +31,7 @@
     
             <button type="submit" id ="btn-entrar" class="ativado" onclick="iniciarProcessamento()">ENTRAR</button>
             <button class="secundario">ESQUECI MINHA SENHA</button>
-            <button class="terciario">CADASTRAR UMA CONTA</button>
+            <button class="terciario" onclick="window.location.href='cadastro-credenciais.html'">CADASTRAR UMA CONTA</button>
         </div>
     </div>
     <script src="js/login.js"></script>

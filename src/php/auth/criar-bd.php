@@ -2,11 +2,10 @@
 
 function conectarBanco() {
     $host = 'localhost';
-    $dbname = 'bq_database';
     $username = 'root';
     $password = '1234';
 
-    $conn = mysqli_connect($host, $username, $password, $dbname);
+    $conn = mysqli_connect($host, $username, $password);
 
     if (!$conn) {
         echo json_encode(["erro" => "Erro de conexão com o banco de dados: " . mysqli_connect_error()]);
@@ -57,6 +56,7 @@ CREATE TABLE IF NOT EXISTS pessoa_juridica (
     username VARCHAR(30) NOT NULL UNIQUE,
     situ_cnpj BOOL NOT NULL,
     FOREIGN KEY (pessoa_id) REFERENCES pessoa(pessoa_id)
+    ON DELETE CASCADE
     
 );
 
@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS pessoa_fisica (
     genero VARCHAR(20) NOT NULL,
     eh_admin BOOL NOT NULL,
     FOREIGN KEY (pessoa_id) REFERENCES pessoa(pessoa_id)
+    ON DELETE CASCADE
     
 );
 
