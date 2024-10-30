@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home_pf.css">
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <button class="side_bar" onclick="openMenu()">
+                <img src="img/menu.png" alt="menu_icon" style="width: 24px; height: 24px;">
+            </button>                     
+            <img src="img/logo.png" class="logo" alt="logo">
+            <div class="nav_buttons">
+                <button class="search">
+                    <img src="img/search.png" alt="search_icon">
+                </button>
+                <button class="cart">
+                    <img src="img/bag.png" alt="cart_icon">
+                </button>
+            </div>
+        </div> 
+    
+        <div class="side_menu" id="sideMenu">
+            <button onclick="closeMenu()" class="close_menu">X</button>
+            <a href="conta-config-pf.html">Seu perfil</a>
+            <a href="#">Produtos</a>
+            <a href="#">Marcas</a>
+        </div>
+        <div class="main">
+            <div class="profile">
+                <button class="profile-button" onclick=" location.href='conta-config-pf'"> 
+                    <img id="profileImage" src="" alt="Profile" style="width: 40px; height: 40px; display: none;">
+                    <span id="profileText" class="profile-text"></span>
+                </button>
+            </div>
+            <div class="tip">
+                <div class="tip-content">
+                    <p style="color: #F53AD6;">#Dica da britney</p>
+                    <p>placeholder</p>
+                </div>
+                <img src="img/britney.png" alt="Tip Image" class="tip-image">
+            </div>
+            <div class="calendar">
+                <img src="img/bg_calendar.png" alt="">
+                <div class="calendar-text">
+                    <span class="cronograma-bubble">#cronograma</span>
+                    <p>acesse as melhores dicas de skin care</p>
+                    </div>
+                </div>                
+            </div>
+                    
+            <div class="for_you">
+                <p style="color: #F53AD6">Dicas e noticias</p>
+                <h2>
+                    para você
+                    <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
+                </h2>
+                <div class="slider_news">
+                    <div class="card">
+                        <img src="img/card1.png" alt="Card 1" class="card-image">
+                        <p class="card-text">Card 1: News Item</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card2.png" alt="Card 2" class="card-image">
+                        <p class="card-text">Card 2: News Item</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card3.png" alt="Card 3" class="card-image">
+                        <p class="card-text">Card 3: News Item</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card4.png" alt="Card 4" class="card-image">
+                        <p class="card-text">Card 4: News Item</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card5.png" alt="Card 5" class="card-image">
+                        <p class="card-text">Card 5: News Item</p>
+                    </div>
+                </div>                
+            </div>
+            <div class="product">
+                <p style="color: #F53AD6">Produtos selelecionados</p>
+                <h2>
+                    para sua pele
+                    <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
+                </h2>
+                <div class="slider_product">
+                    <div class="card">
+                        <img src="img/card1.png" alt="Card 1" class="card-image">
+                        <p class="card-text">Card 1: Hydrating Cream</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card2.png" alt="Card 2" class="card-image">
+                        <p class="card-text">Card 2: Revitalizing Serum</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card3.png" alt="Card 3" class="card-image">
+                        <p class="card-text">Card 3: Sunscreen SPF 50</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card4.png" alt="Card 4" class="card-image">
+                        <p class="card-text">Card 4: Nourishing Face Mask</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/card5.png" alt="Card 5" class="card-image">
+                        <p class="card-text">Card 5: Anti-Aging Lotion</p>
+                    </div>
+                </div> 
+            </div>       
+    </div>
+</body>
+</html>
