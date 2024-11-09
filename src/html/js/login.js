@@ -27,6 +27,7 @@ async function iniciarProcessamento() {
     response = await fetch('../php/auth/auth.php/login', {
 
             method: "POST",
+            credentials: "include",
             body: JSON.stringify(body)
     
     }).then((res) => {

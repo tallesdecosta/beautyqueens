@@ -1,20 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Your code here
-    fetch('/api/user')
-        .then(response => response.json())
-        .then(data => {
-            const profileImage = document.getElementById('profileImage');
-            const profileText = document.getElementById('profileText');
-
-            profileImage.src = data.profileImage;
-            profileText.textContent = `Hello, ${data.username}`;
-
-            profileImage.style.display = 'block';
-        })
-        .catch(error => {
-            console.error('Error fetching user data:', error);
-        });
-
+   
     const sideMenuButton = document.querySelector('.side_bar');
     sideMenuButton.addEventListener('click', openMenu);
 
@@ -32,3 +18,29 @@ function closeMenu() {
     sideMenu.classList.remove("active");
 }
 
+
+
+async function logout() {
+    
+    try {
+
+        const response = await fetch('../php/auth/auth.php/logout', {
+
+            method: 'GET',
+            credentials: "include"
+
+        })
+
+        if (response.status === 204) {
+
+            window.location.href = 'login.html'
+
+        }
+
+    } catch (error) {
+
+        console.error('Erro de logout: ', error);
+
+    }
+
+}

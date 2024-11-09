@@ -3,6 +3,7 @@
     require ('criar-bd.php');
     header('Access-Control-Allow-Origin: *');
     header("Access-Control-Allow-Headers: *");
+    session_start();
 
     
     switch ($_SERVER['REQUEST_URI']) {
@@ -69,6 +70,7 @@
             break;
 
         case '/php/auth/auth.php/register':
+            
 
             $data = json_decode(file_get_contents("php://input"), true);
 
@@ -125,6 +127,38 @@
             }
 
             break;
+
+        
+        case '/php/auth/auth.php/check-auth':
+            
+            if (!isset($_SESSION['id'])) {
+
+                http_response_code(401);
+
+                echo json_encode(["error" => "Unauthorized"]);
+
+                exit();
+            }
+
+            echo json_encode(['user_id' => $_SESSION['id']]);
+            break;
+        case '/php/auth/auth.php/logout':
+
+            if (!isset($_SESSION['id'])) {
+
+                http_response_code(401);
+
+                echo json_encode(["error" => "Unauthorized"]);
+
+                exit();
+            }
+
+            session_destroy();
+            http_response_code(204);
+            echo json_encode(['status' => 'deslogado']);
+
+            break;
+
 
         default:
 
