@@ -35,13 +35,16 @@
         </div>
 
         <div class="searchMenu" id="searchMenu">
-            <header> 
+            <header class="search-header"> 
                 <button class="voltar" onclick="closeSearch()">
-                    <img src="img/arrow.svg" alt="">
+                    <img style='transform: rotate(90deg)' src="img/arrow.svg" alt="">
                 </button>
-                <h2>...</h2>
+                <input type="text" placeholder="Digite sua busca" id="search">
                 
             </header>
+            <div id="search-result">
+
+            </div>
         </div>
 
         <div class="main">

@@ -69,7 +69,6 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease;
     z-index: 1000;
-    padding: 20px;
     display: none;
 
 }
@@ -171,6 +170,31 @@ body {
 .profile-text {
     font-size: 16px; 
     color: #333; 
+}
+
+#search {
+
+    border: none;
+
+}
+
+.search-header {
+    padding: 2px 0px 0px 15px;
+    border-bottom: 1px #838588 solid;
+
+}
+
+.result-wrapper {
+    width: 375px;
+    height: 170px;
+}
+
+#search-result {
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
 }
 
 .tip {
