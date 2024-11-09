@@ -18,6 +18,16 @@ function closeMenu() {
     sideMenu.classList.remove("active");
 }
 
+function openSearch() {
+    const searchMenu = document.getElementById("searchMenu");
+    searchMenu.classList.add("active");
+}
+
+function closeSearch() {
+    const searchMenu = document.getElementById("searchMenu");
+    searchMenu.classList.remove("active");
+
+}
 
 
 async function logout() {

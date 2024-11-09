@@ -17,7 +17,7 @@
             </button>                     
             <img src="img/logo.png" class="logo" alt="logo">
             <div class="nav_buttons">
-                <button class="search">
+                <button class="search" onclick="openSearch()">
                     <img src="img/search.png" alt="search_icon">
                 </button>
                 <button class="cart">
@@ -33,6 +33,17 @@
             <a href="#">Marcas</a>
             <a href="#" onclick="logout()">Sair</a>
         </div>
+
+        <div class="searchMenu" id="searchMenu">
+            <header> 
+                <button class="voltar" onclick="closeSearch()">
+                    <img src="img/arrow.svg" alt="">
+                </button>
+                <h2>...</h2>
+                
+            </header>
+        </div>
+
         <div class="main">
             <div class="profile">
                 <button class="profile-button" onclick=" location.href='conta-config-pf'"> 
@@ -54,9 +65,9 @@
                     <p>acesse as melhores dicas de skin care</p>
                     </div>
                 </div>                
-            </div>
+        </div>
                     
-            <div class="for_you">
+        <div class="for_you">
                 <p style="color: #F53AD6">Dicas e noticias</p>
                 <h2>
                     para você
@@ -84,8 +95,8 @@
                         <p class="card-text">Card 5: News Item</p>
                     </div>
                 </div>                
-            </div>
-            <div class="product">
+        </div>
+        <div class="product">
                 <p style="color: #F53AD6">Produtos selelecionados</p>
                 <h2>
                     para sua pele
@@ -113,7 +124,7 @@
                         <p class="card-text">Card 5: Anti-Aging Lotion</p>
                     </div>
                 </div> 
-            </div>       
+        </div>       
     </div>
 </body>
 <script src="js/home.js"></script>

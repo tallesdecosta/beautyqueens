@@ -12,7 +12,6 @@ body {
 .container {
     width: 100%;
     max-width: 375px; 
-    height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
@@ -56,7 +55,29 @@ body {
 }
 
 .side_menu.active {
-    left: 0; 
+    left: 0;
+}
+
+.searchMenu {
+    
+    position: absolute; 
+    top: 0;
+    right: -2000px; 
+    width: 375px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    display: none;
+
+}
+
+.searchMenu.active {
+    display: block;
+    transition: right 0.3s ease;
+    right: 0; 
 }
 
 .close_menu {
