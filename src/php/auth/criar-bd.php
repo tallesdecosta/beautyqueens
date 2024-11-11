@@ -224,4 +224,9 @@ CREATE TABLE IF NOT EXISTS alergia_pele (
 
 }
 
+
+
 ?>
+
+
+

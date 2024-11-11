@@ -17,7 +17,7 @@
             </button>                     
             <img src="img/logo.png" class="logo" alt="logo">
             <div class="nav_buttons">
-                <button class="search" onclick="openSearch()">
+                <button class="search" onclick="window.location.href='pesquisa.html'">
                     <img src="img/search.png" alt="search_icon">
                 </button>
                 <button class="cart">
@@ -34,19 +34,7 @@
             <a href="#" onclick="logout()">Sair</a>
         </div>
 
-        <div class="searchMenu" id="searchMenu">
-            <header class="search-header"> 
-                <button class="voltar" onclick="closeSearch()">
-                    <img style='transform: rotate(90deg)' src="img/arrow.svg" alt="">
-                </button>
-                <input type="text" placeholder="Digite sua busca" id="search">
-                
-            </header>
-            <div id="search-result">
-
-            </div>
-        </div>
-
+        
         <div class="main">
             <div class="profile">
                 <button class="profile-button" onclick=" location.href='conta-config-pf'"> 
