@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/produto.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <img id="img" src="" class="product-image" alt="Produto">
+        </div>
+    
+        <div class="text-center mt-4">
+            <h5>PRINCIPIA</h5>
+            <h2 id="product-name">Vitamina C</h2>
+            <button class="btn-custom">
+                <i class="fas fa-shopping-bag"></i> Adicionar à sacola
+            </button>
+        </div>
+    
+        <div class="accordion mt-4" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button  id="product-description"  class="accordion-button"    onclick="addToCart()"   type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Descrição
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus ante. Duis condimentum varius diam, vel commodo turpis tempor eu.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Posologia
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Instruções de uso do produto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/produto.js"></script>
+</body>
+</html>
