@@ -120,12 +120,26 @@ function areAllFieldsFilled() {
     return tonalidade && cicatrizes && aspectosPele > 0 && alergias > 0;
 }
 
-document.getElementById("confirmarButton").addEventListener("click", () => {
+document.getElementById("confirmarButton").addEventListener("click", async () => {
 
     if (areAllFieldsFilled()) {
 
+        body = {
+            tonalidade: document.getElementById("tonalidadePele").value,
+            cicatriz: document.getElementById("cicatrizes").value
+        }
+
         const queryString = new URLSearchParams(window.location.search);
-        window.location.href = `confirmacao.html?email=${queryString.get('email')}`;
+
+        const response = await fetch('/php/auth/pele.php', {
+            credentials: 'include',
+            method: "POST",
+            body: JSON.stringify(body)
+        });
+
+
+
+        console.log(await response.json())
 
     } else {
 

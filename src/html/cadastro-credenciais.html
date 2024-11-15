@@ -45,6 +45,9 @@
                 <option value="prefiro-nao-responder">Prefiro não responder</option>
             </select>
 
+            <label for="nasc">Qual sua data de nascimento?</label>
+            <input type="date" name="nasc" id="nasc">
+
             <label for="cpf">CPF</label>
             <input pattern="/^\d{3}\.\d{3}\.\d{3}-\d{2}$/" type="tel" id="cpf" placeholder="000.000.000-00" required maxlength="11">
             <span id="cpfError" style="color: red; display: none;"></span>

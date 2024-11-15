@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS post (
 
 CREATE TABLE IF NOT EXISTS pessoa_fisica (
 
-    cpf CHAR(11) UNIQUE NOT NULL,
+    cpf CHAR(18) UNIQUE NOT NULL,
     pessoa_id BIGINT UNSIGNED NOT NULL PRIMARY KEY,
     nome VARCHAR(260) NOT NULL,
     data_nasc DATE NOT NULL,
@@ -168,7 +168,6 @@ CREATE TABLE IF NOT EXISTS pele (
     pessoa_id BIGINT UNSIGNED NOT NULL,
     tonalidade VARCHAR(15) NOT NULL,
     cicatriz BOOL NOT NULL,
-    tipo VARCHAR(15) NOT NULL,
     FOREIGN KEY (pessoa_id) REFERENCES pessoa_fisica(pessoa_id)
   
 );

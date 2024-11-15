@@ -169,7 +169,8 @@ confirmarButton.addEventListener("click", async () => {
             municipio: document.getElementById('municipio').value,
             tipoLogradouro: document.getElementById('tipo-logradouro').value,
             nomeLogradouro:document.getElementById('logradouro').value,
-            numeroLogradouro: document.getElementById('numero').value
+            numeroLogradouro: document.getElementById('numero').value,
+            nasc: document.getElementById('nasc').value
 
         }
 

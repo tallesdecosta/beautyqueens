@@ -64,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
         $_SESSION['nome'] = $dados['nome'];
+        $_SESSION['nasc'] = $dados['nasc'];
         $_SESSION['genero'] = $dados['genero'];
         $_SESSION['cpf'] = $dados['cpf'];
         $_SESSION['telefone'] = $dados['telefone'];
