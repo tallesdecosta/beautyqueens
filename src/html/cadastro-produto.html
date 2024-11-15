@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-credenciais.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="flex">
+            <button class="voltar" onclick="history.back()">
+                <img src="img/arrow.svg" alt="">
+            </button>
+            <h1>Cadastrar produto</h1>
+        </div>
+
+        <p>Preencha os dados sobre o produto que deseja cadastrar. Ao finalizar o formulário, o sistema irá validar se todas as informações foram preenchidas corretamente e aprovará ou não o seu cadastro.</p>
+
+        <form id="cadastro-form">
+            <label for="nome">Nome do produto</label>
+            <input type="text" id="nome" placeholder="qual o título do produto?" required>
+            <span id="nomeError" style="color: red; display: none;"></span>
+
+            <label for="desc">Descrição do produto</label>
+            <textarea name="desc" id="desc"></textarea>
+
+            <label for="genero">Contraindicações</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Sim, não</option>
+                <option value="masculino">Sim</option>
+                <option value="feminino">Não</option>
+            </select>
+
+            <label for="genero">Posologia</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Sim, não</option>
+                <option value="masculino">Sim</option>
+                <option value="feminino">Não</option>
+            </select>
+
+            <label for="comp">Composição do produto</label>
+            <textarea name="comp" id="comp"></textarea>
+
+            <label for="genero">Disponibilidade na sua loja</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Disponível, não disponível</option>
+                <option value="masculino">Disponível</option>
+                <option value="feminino">Não disponível</option>
+            </select>
+
+            <label for="nome">Volume</label>
+            <input type="text" id="nome" placeholder="informe o volume do produto" required>
+            <span id="nomeError" style="color: red; display: none;"></span>
+
+            <label for="genero">Categoria</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Informe a categoria do produto</option>
+                <option value="masculino">Sim</option>
+                <option value="feminino">Não</option>
+            </select>
+
+            <label for="genero">É vegano?</label>
+            <select id="genero" required>
+                <option value="" disabled selected>Sim, não</option>
+                <option value="masculino">Sim</option>
+                <option value="feminino">Não</option>
+            </select>
+
+            <label for="imagem">Imagem</label>
+            <input type="file" name="imagem" id="imagem">
+
+            <button type="submit" class="btn desativado" id="btnConfirmar" disabled>Confirmar</button>
+            <button type="button" class="btn secundario" id="btnCancelar">Cancelar</button>
+        </form>
+    </div>
+
+    <script defer src="js/cadastro-produto.js"></script>
+
+</body>
+
+</html>

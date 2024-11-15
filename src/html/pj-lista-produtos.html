@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-credenciais.css">
+</head>
+
+<body onload="getProducts()">
+
+    <div class="container">
+
+        <div class="flex">
+            <button class="voltar" onclick="history.back()">
+                <img src="img/arrow.svg" alt="">
+            </button>
+            <h1>Lista de produtos</h1>
+        </div>
+
+        <p>Todos os produtos que você tem cadastrado. Clicando neles, você pode alterá-los ou excluí-los.</p>
+
+        <div class="produtos-wrapper" id="p-wrapper">
+            
+        </div>
+    </div>
+
+    <script defer src="js/pj-lista-produtos.js"></script>
+
+</body>
+
+</html>

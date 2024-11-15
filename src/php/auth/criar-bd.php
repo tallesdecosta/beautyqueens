@@ -16,6 +16,8 @@ function conectarBanco() {
 }
 
 function create_tables($conn) {
+    $imagem = file_get_contents('../../html/img/no-pic.jpg');
+    $imagem_safe=$conn->real_escape_string($imagem);
 
     $sql = "
 CREATE DATABASE IF NOT EXISTS bq_database;
@@ -204,8 +206,14 @@ CREATE TABLE IF NOT EXISTS alergia_pele (
   FOREIGN KEY (alergia_id) REFERENCES alergia(alergia_id)
 
 );
+
+INSERT INTO imagem (arquivo, alt_text)
+SELECT '".$imagem_safe."', 'default picture'
+WHERE NOT EXISTS (SELECT 1 FROM imagem);
+
 ";
 
+    
 
     if ($conn->multi_query($sql)) {
         do {
