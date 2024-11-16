@@ -58,7 +58,7 @@ async function logout() {
 
 async function fetchTip() {
     try {
-        const response = await fetch('../../php/tip/mock.php');
+        const response = await fetch('../php/tip/mock.php');
         const data = await response.json();
         const tipElement = document.querySelector('.tip-content p:nth-child(2)');
         tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
