@@ -1,16 +1,10 @@
 <?php
+session_start();
+
 $mockData = [
-    'tonalidade' => 'branca',
-    'cicatriz' => 'sim',
-    'texto' => 'Hydrate your skin daily.',
+    "tip" => "Stay hydrated and take care of your skin!"
 ];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $mockData['tonalidade'] = $_POST['tonalidade'] ?? $mockData['tonalidade'];
-    $mockData['cicatriz'] = $_POST['cicatriz'] ?? $mockData['cicatriz'];
-    $mockData['texto'] = $_POST['texto'] ?? $mockData['texto'];
-}
-
-header('Content-Type: application/json');
+header("Content-Type: application/json");
 echo json_encode($mockData);
 ?>

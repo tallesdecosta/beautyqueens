@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeMenuButton = document.querySelector('.close_menu');
     closeMenuButton.addEventListener('click', closeMenu);
+
+    fetchTip();
 });
 
 function openMenu() {
@@ -55,13 +57,20 @@ async function logout() {
 }
 
 async function fetchTip() {
-    const response = await fetch('mock.php');
-    const data = await response.json();
-    const tipElement = document.querySelector('.tip-content p:nth-child(2)');
-    tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
+    async function fetchTip() {
+        try {
+            const response = await fetch('../../php/tip/mock.php');
+            const data = await response.json();
+            const tipElement = document.querySelector('.tip-content p:nth-child(2)');
+            tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
+        } catch (error) {
+            console.error('Error fetching tip:', error);
+            const tipElement = document.querySelector('.tip-content p:nth-child(2)');
+            tipElement.textContent = 'Erro ao buscar dicas.';
+        }
+    }
+    
 }
-
-document.addEventListener('DOMContentLoaded', fetchTip);
 
 
 
