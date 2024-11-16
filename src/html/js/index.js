@@ -1,10 +1,10 @@
 
 document.getElementById("btn-acessar").addEventListener("click", function () {
-    window.location.href = "html/login.html"; 
+    window.location.href = "login.html"; 
 });
 
 document.getElementById("btn-cadastro").addEventListener("click", function () {
-    window.location.href = "html/cadastro-credenciais.html"; 
+    window.location.href = "cadastro-credenciais.html"; 
 });
 
 
