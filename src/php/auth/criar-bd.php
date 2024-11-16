@@ -211,6 +211,19 @@ INSERT INTO imagem (arquivo, alt_text)
 SELECT '".$imagem_safe."', 'default picture'
 WHERE NOT EXISTS (SELECT 1 FROM imagem);
 
+CREATE TABLE IF NOT EXISTS tip (
+    tip_id SERIAL PRIMARY KEY,
+    pessoa_id BIGINT UNSIGNED NOT NULL,
+    tonalidade VARCHAR(15),
+    aspecto_id BIGINT UNSIGNED,              
+    alergia_id BIGINT UNSIGNED,               
+    texto TEXT NOT NULL,                      
+    FOREIGN KEY (pessoa_id) REFERENCES pessoa_fisica(pessoa_id) ON DELETE CASCADE,
+    FOREIGN KEY (aspecto_id) REFERENCES aspecto(aspecto_id) ON DELETE SET NULL,
+    FOREIGN KEY (alergia_id) REFERENCES alergia(alergia_id) ON DELETE SET NULL
+);
+
+
 ";
 
     

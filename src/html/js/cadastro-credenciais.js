@@ -70,6 +70,7 @@ const numeroTemplate = '';
 const numeroErrorMessage = 'Por favor, digite o número do seu logradouro corretamente acima.'
 
 const confirmarButton = document.getElementById("btnConfirmar");
+const cancelButton = document.getElementById("btnCancelar");
 
 function validateField(type, input, regex, errorElement, errorMessage, formatRegex='', formatTemplate='') {
 
@@ -196,6 +197,11 @@ confirmarButton.addEventListener("click", async () => {
     }
 
 });
+
+cancelButton.addEventListener("click", async () => {
+    window.location.href = "index.html"; 
+});
+
 
 for (i of inputs) {
 

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Your code here
    
     const sideMenuButton = document.querySelector('.side_bar');
     sideMenuButton.addEventListener('click', openMenu);
@@ -54,5 +53,15 @@ async function logout() {
     }
 
 }
+
+async function fetchTip() {
+    const response = await fetch('mock.php');
+    const data = await response.json();
+    const tipElement = document.querySelector('.tip-content p:nth-child(2)');
+    tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
+}
+
+document.addEventListener('DOMContentLoaded', fetchTip);
+
 
 
