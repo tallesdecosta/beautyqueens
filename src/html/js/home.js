@@ -57,19 +57,17 @@ async function logout() {
 }
 
 async function fetchTip() {
-    async function fetchTip() {
-        try {
-            const response = await fetch('../../php/tip/mock.php');
-            const data = await response.json();
-            const tipElement = document.querySelector('.tip-content p:nth-child(2)');
-            tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
-        } catch (error) {
-            console.error('Error fetching tip:', error);
-            const tipElement = document.querySelector('.tip-content p:nth-child(2)');
-            tipElement.textContent = 'Erro ao buscar dicas.';
-        }
+    try {
+        const response = await fetch('../../php/tip/mock.php');
+        const data = await response.json();
+        const tipElement = document.querySelector('.tip-content p:nth-child(2)');
+        tipElement.textContent = data.tip || 'Sem dicas disponiveis.';
+    } catch (error) {
+        console.error('Error fetching tip:', error);
+        const tipElement = document.querySelector('.tip-content p:nth-child(2)');
+        tipElement.textContent = 'Erro ao buscar dicas.';
     }
-    
+ 
 }
 
 
