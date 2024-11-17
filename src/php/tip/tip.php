@@ -1,17 +1,18 @@
 <?php
 header("Content-Type: application/json");
 
-include 'criar-bd.php';
+include ('../auth/criar-bd.php');
 
 try {
     $conn = conectarBanco();
+    create_tables($conn);
 } catch (Exception $e) {
     echo json_encode(["error" => "Não conseguiu se conectar ao banco: " . $e->getMessage()]);
     exit();
 }
 
 session_start();
-$pessoa_id = $_SESSION['pessoa_id'] ?? null;
+$pessoa_id = $_SESSION['id'] ?? null;
 if (!$pessoa_id) {
     echo json_encode(["error" => "User not logged in."]);
     exit();

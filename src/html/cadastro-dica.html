@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit New Tips</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-dica.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Envie uma nova dica</h1>
+        <form id="tipForm">
+            <label for="tonalidade">Tonalidade da Pele:</label>
+            <select name="tonalidade" id="tonalidade" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="branca">Branca</option>
+                <option value="parda">Parda</option>
+                <option value="negra">Negra</option>
+                <option value="indígena">Indígena</option>
+                <option value="amarela">Amarela</option>
+            </select>
+
+            <label for="cicatriz">Possui Cicatriz?</label>
+            <select name="cicatriz" id="cicatriz" required>
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+            </select>
+
+            <label for="tip">Dica:</label>
+            <textarea name="tip" id="tip" rows="5" placeholder="Escreva a dica aqui..." required></textarea>
+
+            <button type="submit">Enviar Dica</button>
+            <button onclick="location.href='select-tip.html'">Cancelar</button>
+        </form>
+
+        <div id="message" class="hidden"></div>
+    </div>
+    <script src="js/cadastro-dica.js"></script>
+</body>
+</html>
