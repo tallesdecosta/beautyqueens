@@ -16,7 +16,7 @@ function conectarBanco() {
 }
 
 function create_tables($conn) {
-    $imagem = file_get_contents('../../html/img/no-pic.jpg');
+    $imagem = file_get_contents(__DIR__ .'/no-pic.jpg');
     $imagem_safe=$conn->real_escape_string($imagem);
 
     $sql = "
@@ -212,6 +212,15 @@ CREATE TABLE IF NOT EXISTS tips (
     tonalidade VARCHAR(15) NOT NULL,
     cicatriz BOOL,
     tip TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sacola (
+
+    pessoa_id BIGINT UNSIGNED NOT NULL, 
+    produto_id BIGINT UNSIGNED NOT NULL,
+    FOREIGN KEY (pessoa_id) REFERENCES pessoa(pessoa_id),
+    FOREIGN KEY (produto_id) REFERENCES produto(produto_id)
+
 );
 
 INSERT INTO imagem (arquivo, alt_text)

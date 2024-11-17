@@ -1,26 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     carregarItensDaSacola();
 
     document.querySelector('.clear-link').addEventListener('click', limparSacola);
+
     document.querySelector('.finalizar-button').addEventListener('click', finalizarCompra);
+
     document.querySelector('.back-button').addEventListener('click', voltarParaPesquisa);
+
 });
 
-function carregarItensDaSacola() {
-    fetch('sacola.php?action=read')
-        .then(response => response.json())
+async function carregarItensDaSacola() {
+
+    await fetch('/php/sacola.php?action=read')
+        .then((res) => {
+            return res.json()
+        })
         .then(data => {
+
             if (data.status === "A sacola está vazia") {
+
                 document.getElementById('sacola-itens').innerHTML = '<p>Sua sacola está vazia.</p>';
                 atualizarTotal(0);
-            } else if (data.status === "Itens encontrados") {
+
+            } else{
+
+
                 renderizarItensDaSacola(data.itens);
             }
+
         })
-        .catch(error => mostrarMensagem('Erro ao carregar itens da sacola.', 'erro'));
+
+
+
 }
 
 function renderizarItensDaSacola(itens) {
+    console.log('s')
     const sacolaContainer = document.getElementById('sacola-itens');
     sacolaContainer.innerHTML = '';
 
@@ -45,10 +61,6 @@ function renderizarItensDaSacola(itens) {
         itemBrand.textContent = item.marca || 'Principia';
         itemInfo.appendChild(itemBrand);
 
-        const itemPrice = document.createElement('div');
-        itemPrice.classList.add('item-price');
-        itemPrice.textContent = `R$ ${item.preco.toFixed(2).replace('.', ',')}`;
-        itemInfo.appendChild(itemPrice);
 
         const itemQuantity = document.createElement('div');
         itemQuantity.classList.add('item-quantity');
@@ -77,7 +89,7 @@ function renderizarItensDaSacola(itens) {
         sacolaContainer.appendChild(itemElement);
     });
 
-    atualizarTotal(calcularTotal(itens));
+
 }
 
 function alterarQuantidade(id, delta) {
@@ -99,8 +111,8 @@ function alterarQuantidade(id, delta) {
 }
 
 function limparSacola() {
-    fetch('sacola.php?action=clear', {
-        method: 'POST',
+    fetch('/php/sacola.php?action=clear', {
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     })
         .then(response => response.json())

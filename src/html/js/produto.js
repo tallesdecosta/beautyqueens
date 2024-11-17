@@ -1,8 +1,6 @@
-// Obtém o ID do produto da URL
+
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
-
-// Faz a requisição AJAX para a página PHP
 
 fetch(`../php/produto.php?`+ new URLSearchParams({id:productId}), {method:"GET"})
   .then(response => response.json())
@@ -17,14 +15,21 @@ fetch(`../php/produto.php?`+ new URLSearchParams({id:productId}), {method:"GET"}
     console.error('Erro ao carregar os dados do produto:', error);
   });
 
-// Seleciona o botão "Adicionar à sacola" pelo ID
-const addToCartButton = document.getElementById("add-to-cart-btn");
 
-// Função para adicionar o item à sacola
-function addToCart() {
-    // Exibe uma mensagem de confirmação (pode ser um alert ou uma notificação na página)
-    alert("Produto adicionado à sacola com sucesso!");
 
-    // Aqui você pode adicionar a lógica para atualizar o número de itens na sacola,
-    // salvar o item no localStorage ou atualizar o backend
+async function addToCart() {
+
+    body = {
+
+      id: urlParams.get('id')
+
+    }
+
+    response = await fetch("/php/sacola.php?action=inserirSacola", {
+      method: "POST",
+      credentials: "include",
+      body: JSON.stringify(body)
+    });
+
+    console.log(await response.json())
 }
