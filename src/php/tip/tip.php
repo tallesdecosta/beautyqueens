@@ -1,11 +1,11 @@
 <?php
 header("Content-Type: application/json");
 
-echo(__DIR__);
-include '../auth/criar-bd.php';
+include ($_SERVER["DOCUMENT_ROOT"] .'/projeto/src/php/auth/criar-bd.php');
 
 try {
     $conn = conectarBanco();
+    create_tables($conn);
 } catch (Exception $e) {
     echo json_encode(["error" => "Não conseguiu se conectar ao banco: " . $e->getMessage()]);
     exit();

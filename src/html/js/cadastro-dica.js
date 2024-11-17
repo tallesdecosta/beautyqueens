@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageDiv.className = 'hidden';
 
         try {
-            const response = await fetch('../php/tip/cadastro-dica.php', {
+            const response = await fetch('../php/cadastro-dica.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     document.getElementById('cancelButton').addEventListener('click', function() {
-        window.location.href = 'home.html';
+        window.location.href = '../home.html';
     });
 });
