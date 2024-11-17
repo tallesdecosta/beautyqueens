@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script src="js/checkAuthStatus.js"></script>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home PJ</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home_pf.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="side_menu" id="sideMenu">
+            <button onclick="closeMenu()" class="close_menu">X</button>
+            <a href="conta-config-pj.html">Perfil</a>
+            <a href="gerenciar-produtos.html">Gerenciar Produtos</a>
+            <a href="#" onclick="deleteUser()">Deletar Conta</a>
+            <a href="#" onclick="logout()">Sair</a>
+        </div>
+
+        <!-- Botão para abrir o menu lateral -->
+        <div class="nav_bar">
+            <button class="side_bar" onclick="openMenu()">
+                <img src="img/menu.png" alt="menu_icon" style="width: 24px; height: 24px;">
+            </button>                     
+            <img src="img/logo.png" class="logo" alt="logo">
+        </div>
+    </div>
+
+    <script src="js/delete-user.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
