@@ -1,6 +1,7 @@
 <?php
 header("Content-Type: application/json");
 
+echo(__DIR__);
 include '../auth/criar-bd.php';
 
 try {

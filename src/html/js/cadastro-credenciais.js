@@ -199,7 +199,7 @@ confirmarButton.addEventListener("click", async () => {
 });
 
 cancelButton.addEventListener("click", async () => {
-    window.location.href = "index.html"; 
+    window.location.href = "../index.html"; 
 });
 
 
