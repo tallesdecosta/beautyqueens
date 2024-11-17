@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/json");
 
-include ($_SERVER["DOCUMENT_ROOT"] .'/projeto/src/php/auth/criar-bd.php');
+include ('../auth/criar-bd.php');
 
 try {
     $conn = conectarBanco();
@@ -12,7 +12,7 @@ try {
 }
 
 session_start();
-$pessoa_id = $_SESSION['pessoa_id'] ?? null;
+$pessoa_id = $_SESSION['id'] ?? null;
 if (!$pessoa_id) {
     echo json_encode(["error" => "User not logged in."]);
     exit();

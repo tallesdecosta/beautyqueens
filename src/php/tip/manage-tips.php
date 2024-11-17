@@ -5,7 +5,7 @@ include '../auth/criar-bd.php';
 
 session_start();
 
-if (!isset($_SESSION['tonalidade']) || !isset($_SESSION['cicatriz'])) {
+if (!isset($_SESSION['id'])) {
     echo json_encode(['error' => 'User not authenticated.']);
     exit();
 }
@@ -20,7 +20,7 @@ try {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     try {
-        $sql = "SELECT id, tip FROM tips";
+        $sql = "SELECT tip_id, tip FROM tips";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
         $tipId = $data['id'];
 
         try {
-            $sql = "DELETE FROM tips WHERE id = ?";
+            $sql = "DELETE FROM tips WHERE tip_id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $tipId);
             $stmt->execute();
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
         $newTip = $data['tip'];
 
         try {
-            $sql = "UPDATE tips SET tip = ? WHERE id = ?";
+            $sql = "UPDATE tips SET tip = ? WHERE tip_id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $newTip, $tipId);
             $stmt->execute();

@@ -46,15 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 data.tips.forEach(tip => {
                     const row = document.createElement('tr');
+                    console.log(tip)
                     row.innerHTML = `
                         <td>${tip.tip}</td>
                         <td>
-                            <button class="editBtn" data-id="${tip.id}">&#9998; Edit</button>
-                            <button class="deleteBtn" data-id="${tip.id}">❌ Delete</button>
+                            <button class="editBtn" data-id="${tip.tip_id}">&#9998; Edit</button>
+                            <button class="deleteBtn" data-id="${tip.tip_id}">❌ Delete</button>
                         </td>
                     `;
                     tableBody.appendChild(row);
                 });
+
+                
 
                 document.querySelectorAll('.editBtn').forEach(button => {
                     button.addEventListener('click', (event) => {
@@ -67,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.deleteBtn').forEach(button => {
                     button.addEventListener('click', async (event) => {
                         const tipId = event.target.getAttribute('data-id');
+                        
                         if (confirm('Are you sure you want to delete this tip?')) {
                             const response = await fetch('../php/tip/manage-tips.php', {
                                 method: 'DELETE',

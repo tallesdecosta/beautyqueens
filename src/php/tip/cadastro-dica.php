@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/json");
 
-include ($_SERVER["DOCUMENT_ROOT"] .'/projeto/src/php/auth/criar-bd.php');
+include ('../auth/criar-bd.php');
 
 try {
     $conn = conectarBanco();
