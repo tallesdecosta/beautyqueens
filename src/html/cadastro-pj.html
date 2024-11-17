@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete seu cadastro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-pj.css">
+    <link rel="stylesheet" href="css/toggle.css">
+</head>
+<body>
+    <div class="header">
+        <span class="back-button">←</span>
+        <h1>Complete seu cadastro</h1>
+        <p class="subtitle">Preencha seus dados para criarmos o seu perfil exclusivo e recomendarmos seus produtos.</p>
+    </div>
+
+    <div class="toggle-container">
+        <span class="toggle-label">Pessoa Física</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="userTypeToggle">
+            <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Pessoa Jurídica</span>
+    </div>
+
+    <form>
+        <button type="button" class="logo-button">CARREGAR LOGO</button>
+        <div class="form-group">
+            <label>Nome fantasia</label>
+            <input type="text" placeholder="o nome da sua empresa">
+        </div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <select>
+                <option value="" disabled selected>o nome de exibição para clientes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Data de abertura</label>
+            <input type="text" placeholder="dd/mm/aaaa">
+        </div>
+
+        <div class="form-group">
+            <label>Situação CNPJ</label>
+            <select>
+                <option value="" disabled selected>ativo ou inativo?</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="exemplo@email.com.br">
+        </div>
+
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" placeholder="••••••••">
+        </div>
+
+        <div class="form-group">
+            <label>Estado</label>
+            <select>
+                <option value="" disabled selected>Em qual estado vive?</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Cidade</label>
+            <select>
+                <option value="" disabled selected>Qual cidade você mora?</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Município</label>
+            <input type="text" placeholder="nome do seu município">
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de logradouro</label>
+            <select>
+                <option value="" disabled selected>rua, avenida, bloco, morro, etc.</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div class="address-group">
+                <input type="text" placeholder="como te encontrar?">
+                <input type="number" placeholder="0" style="width: 80px;">
+            </div>
+        </div>
+
+        <button type="submit" class="save-button">SALVAR DADOS</button>
+        <button type="button" class="cancel-button">CANCELAR</button>
+    </form>
+    <script src="js/pj.js"></script>
+</body>
+</html>

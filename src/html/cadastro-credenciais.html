@@ -7,6 +7,7 @@
     <title>Cadastro - Sobre Você</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/cadastro-credenciais.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 
 <body>
@@ -30,6 +31,15 @@
 
         <p>Preencha seus dados para criarmos o seu perfil exclusivo e recomendarmos os produtos ideais para uma pele
             mais saudável e bonita.</p>
+
+            <div class="toggle-container">
+                <span class="toggle-label">Pessoa Física</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="userTypeToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Pessoa Jurídica</span>
+            </div>
 
         <form id="cadastro-form">
             <label for="nome">Nome</label>

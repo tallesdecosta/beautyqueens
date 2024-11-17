@@ -7,7 +7,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home_pf.css">
-    
 </head>
 <body>
     <div class="container">
@@ -25,19 +24,19 @@
                 </button>
             </div>
         </div> 
-    
+
         <div class="side_menu" id="sideMenu">
             <button onclick="closeMenu()" class="close_menu">X</button>
             <a href="conta-config-pf.html">Seu perfil</a>
             <a href="produto.html">Produtos</a>
             <a href="#">Marcas</a>
+            <a href="#" onclick="deleteUser()">Deletar conta</a>
             <a href="#" onclick="logout()">Sair</a>
         </div>
 
-        
         <div class="main">
             <div class="profile">
-                <button class="profile-button" onclick=" location.href='conta-config-pf'"> 
+                <button class="profile-button" onclick="location.href='conta-config-pf'"> 
                     <img id="profileImage" src="" alt="Profile" style="width: 40px; height: 40px; display: none;">
                     <span id="profileText" class="profile-text"></span>
                 </button>
@@ -54,69 +53,40 @@
                 <div class="calendar-text">
                     <span class="cronograma-bubble">#cronograma</span>
                     <p>acesse as melhores dicas de skin care</p>
-                    </div>
-                </div>                
+                </div>
+            </div>                
         </div>
-                    
+
+        <!-- Sessão de "Dicas e Notícias" que será preenchida dinamicamente -->
         <div class="for_you">
-                <p style="color: #F53AD6">Dicas e noticias</p>
-                <h2>
-                    para você
-                    <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
-                </h2>
-                <div class="slider_news">
-                    <div class="card">
-                        <img src="img/news1.webp" alt="Card 1" class="card-image">
-                        <p class="card-text">Máscaras faciais podem reverter os danos do envelhecimento em uma noite – Dermatologistas confirmam!</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/news2.jfif" alt="Card 2" class="card-image">
-                        <p class="card-text">Água com colágeno pode eliminar rugas em apenas uma semana – Cientistas revelam fórmula milagrosa!</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/news3.jfif" alt="Card 3" class="card-image">
-                        <p class="card-text">O segredo para uma pele perfeita está em aplicar óleo de coco em todas as horas do dia – Descubra por que é essencial!</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/news4.jfif" alt="Card 4" class="card-image">
-                        <p class="card-text">Peeling de café promete rejuvenescimento instantâneo sem efeitos colaterais – Estudo revela resultados surpreendentes!</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/news5.jpg" alt="Card 5" class="card-image">
-                        <p class="card-text">Protetor solar causa envelhecimento precoce – Pesquisadores alertam para os perigos do filtro solar!</p>
-                    </div>
-                </div>                
-        </div>
+            <p style="color: #F53AD6">Dicas e notícias</p>
+            <h2>
+                Para você
+                <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
+            </h2>
+            <div class="slider_news" id="news-container">
+                <!-- Os posts serão carregados aqui dinamicamente -->
+            </div>
+        </div> 
+        <br>
+
         <div class="product">
-                <p style="color: #F53AD6">Produtos selelecionados</p>
-                <h2>
-                    para sua pele
-                    <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
-                </h2>
-                <div class="slider_product">
-                    <div class="card">
-                        <img src="img/card1.png" alt="Card 1" class="card-image">
-                        <p class="card-text">Card 1: Hydrating Cream</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/card2.png" alt="Card 2" class="card-image">
-                        <p class="card-text">Card 2: Revitalizing Serum</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/card3.png" alt="Card 3" class="card-image">
-                        <p class="card-text">Card 3: Sunscreen SPF 50</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/card4.png" alt="Card 4" class="card-image">
-                        <p class="card-text">Card 4: Nourishing Face Mask</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/card5.png" alt="Card 5" class="card-image">
-                        <p class="card-text">Card 5: Anti-Aging Lotion</p>
-                    </div>
-                </div> 
+            <p style="color: #F53AD6">Produtos selecionados</p>
+            <h2>
+                Para sua pele
+                <img src="img/arrow_simple.png" alt="arrow_simple" style="width: 24px; height: 40px; vertical-align: middle;">
+            </h2>
+            <div class="slider_product">
+                <div class="card">
+                    <img src="img/card1.png" alt="Card 1" class="card-image">
+                    <p class="card-text">Card 1: Hydrating Cream</p>
+                </div>
+                <!-- Outros cards de produtos aqui -->
+            </div> 
         </div>       
     </div>
+
+    <script src="js/delete-user.js"></script>
+    <script src="js/home.js"></script>
 </body>
-<script src="js/home.js"></script>
 </html>

@@ -28,3 +28,4 @@ function addToCart() {
     // Aqui você pode adicionar a lógica para atualizar o número de itens na sacola,
     // salvar o item no localStorage ou atualizar o backend
 }
+

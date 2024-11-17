@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F53AD6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.step-line {
+    height: 2px;
+    width: 100px;
+    background-color: #F53AD6;
+    margin: 0 10px;
+}
+
+.step-text {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+}
+
+.back-button {
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+select, .select-container {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+}
+
+.select-container::after {
+    content: "›";
+    position: absolute;
+    right: 15px;
+    transform: rotate(90deg);
+    font-size: 24px;
+    color: #666;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 35px 5px 5px;
+}
+
+.tag {
+    background-color: #F53AD6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.tag-close {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button-primary {
+    background-color: #F53AD6;
+    color: white;
+}
+
+.button-secondary {
+    background-color: white;
+    color: #F53AD6;
+    border: 1px solid #F53AD6;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 8px;
+    cursor: help;
+}
+
+.hidden {
+    display: none;
+}
+
+.select-container.has-tags {
+    padding: 5px;
+    min-height: 54px;
+}

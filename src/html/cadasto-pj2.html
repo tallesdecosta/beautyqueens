@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Perfil de Pele</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro-pj2.css">
+</head>
+<body>
+    <div class="progress-bar">
+        <div>
+            <div class="step">✓</div>
+            <div class="step-text">Sobre você</div>
+        </div>
+        <div class="step-line"></div>
+        <div>
+            <div class="step">2</div>
+            <div class="step-text">Sobre sua pele</div>
+        </div>
+    </div>
+
+    <div class="back-button">‹</div>
+    <h1>Complete seu cadastro</h1>
+    <p>Preencha seus dados para criarmos o seu perfil exclusivo e recomendarmos os produtos ideais para uma pele mais saudável e bonita.</p>
+
+    <div class="form-group">
+        <label>Qual a tonalidade da sua pele? <span class="info-icon">i</span></label>
+        <div class="select-container">
+            <select id="skinTone">
+                <option value="parda">Parda</option>
+                <option value="clara">Clara</option>
+                <option value="negra">Negra</option>
+                <option value="amarela">Amarela</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Possui cicatrizes no rosto? <span class="info-icon">i</span></label>
+        <div class="select-container">
+            <select id="scars">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Selecione os aspectos da sua pele <span class="info-icon">i</span></label>
+        <div class="select-container has-tags" id="skinAspectsContainer">
+            <div class="tag-container" id="skinAspects">
+                <div class="tag">
+                    Sardas <span class="tag-close">✕</span>
+                </div>
+                <div class="tag">
+                    Oleosa <span class="tag-close">✕</span>
+                </div>
+            </div>
+        </div>
+        <select id="skinAspectsSelect" class="hidden">
+            <option value="">Selecione um aspecto</option>
+            <option value="sardas">Sardas</option>
+            <option value="oleosa">Oleosa</option>
+            <option value="acne">Acne</option>
+            <option value="manchas">Manchas</option>
+            <option value="poros_dilatados">Poros Dilatados</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Possui alguma alergia <span class="info-icon">i</span></label>
+        <div class="select-container has-tags" id="allergiesContainer">
+            <div class="tag-container" id="allergies">
+                <div class="tag">
+                    Descamação <span class="tag-close">✕</span>
+                </div>
+                <div class="tag">
+                    Dermatite <span class="tag-close">✕</span>
+                </div>
+            </div>
+        </div>
+        <select id="allergiesSelect" class="hidden">
+            <option value="">Selecione uma alergia</option>
+            <option value="descamacao">Descamação</option>
+            <option value="dermatite">Dermatite</option>
+            <option value="urticaria">Urticária</option>
+            <option value="vermelhidao">Vermelhidão</option>
+        </select>
+    </div>
+
+    <button class="button button-primary">CONFIRMAR</button>
+    <button class="button button-secondary">CANCELAR</button>
+
+    <script src="js/cadastro-pj2.js"></script>
+</body>
+</html>

@@ -251,9 +251,9 @@ body {
     padding: 5px 15px;
     border-radius: 20px;
     color: #F53AD6;
-    font-weight: bold;
     margin-bottom: 5px;
     display: inline-block; 
+    font-size: small;
 }
 
 .calendar-text p {
